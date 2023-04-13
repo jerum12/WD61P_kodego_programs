@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS</title>
+  </head>
+  <body>
+    <form action="submit.php" method="post" name="registration_form">
+      <!-- TYPE = TEXT -->
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="" placeholder="Input Username" />
+      </div>
+
+      <!-- TYPE = PASSWORD -->
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Input Password" />
+      </div>
+
+      <!-- TYPE = CHECKBOX -->
+      <div>
+        <label for="fruits">Select Your Favorite Fruits:</label>
+        <input type="checkbox" id="fruit" name="fruit" value="apple" />
+        <label for="apple">Apple</label>
+
+        <input type="checkbox" id="fruit" name="fruit" value="mango" />
+        <label for="mango">Mango</label>
+
+        <input type="checkbox" id="fruit" name="fruit" value="banana" />
+        <label for="banana">Banana</label>
+      </div>
+
+      <!-- TYPE = RADIO -->
+      <div>
+        <label for="gender">Select your gender:</label>
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+
+      <!-- TYPE = FILE -->
+      <div>
+        <label for="avatar">Select Picture:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" multiple />
+      </div>
+
+      <!-- TEXT AREA-->
+      <div>
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+      </div>
+
+      <!-- TYPE = SELECT -->
+      <div>
+        <label for="colors">Select your favorite color:</label>
+        <!-- FOR MULTIPLE
+             <select name="colors" id="colors" multiple> -->
+        <select name="colors" id="colors">
+          <option value="red">Red</option>
+          <option value="white">White</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+      </div>
+
+      <!-- FOR FIELDSET -->
+      <div>
+        <fieldset>
+          <legend>User Details</legend>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="" placeholder="Input Name" />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="" placeholder="Input Email" />
+          </div>
+          <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" value="" placeholder="Input Phone #" />
+          </div>
+        </fieldset>
+      </div>
+
+      <div>
+        <fieldset>
+          <legend>Contact Details</legend>
+          <div>
+            <label for="c_name">Name:</label>
+            <input type="text" id="c_name" name="c_name" value="" placeholder="Input Name" />
+          </div>
+          <div>
+            <label for="c_email">Email:</label>
+            <input type="text" id="c_email" name="c_email" value="" placeholder="Input Email" />
+          </div>
+          <div>
+            <label for="c_phone">Phone:</label>
+            <input type="text" id="c_phone" name="c_phone" value="" placeholder="Input Phone #" />
+          </div>
+        </fieldset>
+      </div>
+
+      <div>
+        <!-- TYPE = RESET -->
+        <input type="reset" value="Reset" />
+
+        <!-- TYPE = SUBMIT -->
+        <input type="submit" value="Register" />
+      </div>
+    </form>
+  </body>
+</html>

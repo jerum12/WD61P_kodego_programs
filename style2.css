@@ -1,0 +1,14 @@
+h2 {
+  color: gray;
+}
+
+#h2only {
+  color: green;
+}
+
+#div1 {
+  display: inline;
+}
+#div2 {
+  display: inline;
+}
