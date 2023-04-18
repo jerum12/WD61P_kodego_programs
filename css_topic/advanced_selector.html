@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a[others^='www'] {
+        color: red;
+      }
+      a[others$='.com'] {
+        color: red;
+      }
+
+      /* GROUPINGS MULTIPLE SELECT */
+      div,
+      p,
+      #id,
+      .class {
+        /* border: 1px solid green; */
+        font-size: 20px;
+      }
+
+      /* FOR DESCENDANT SELECT ALL P's inside parent DIV
+        anak na P ng div1 hanggan ka apu apuhan
+      */
+      #div1 p {
+        color: yellow;
+      }
+
+      /* DIRECT CHILD SELECTOR 
+        SELCT ALL P's child only ni DIV
+        anak mo lang talaga
+      */
+      #div2 > p {
+        color: orange;
+      }
+
+      /* GENERAL SIBLING COMBINATOR 
+        SELECT ALL H1 na kapatid
+      */
+      #div3 ~ h1 {
+        color: brown;
+      }
+
+      /*ADJACENT SIBLING COMBINATOR
+        SELECT ALL H1 na kapatid
+      */
+      #div4 + h1 {
+        color: goldenrod;
+      }
+
+      /* PSUEDO CLASS */
+      a:hover {
+        font-size: 50px;
+        color: magenta;
+      }
+
+      li:nth-child(2) {
+        background: green;
+      }
+
+      /* PSEUDO ELEMENT */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+        position: relative;
+      }
+
+      .box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        background-color: aqua;
+        width: 50%;
+        height: 50%;
+      }
+      .box::after {
+        content: 'Click Here';
+        position: absolute;
+        bottom: 0;
+        background-color: azure;
+        cursor: pointer;
+        color: red;
+      }
+
+      #p::first-letter {
+        font-size: 100px;
+        font-weight: bold;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <a others="1" href="">Hello World</a>
+      <a others="www.abc" href="">Hello World2</a>
+      <a others="www.com" href="">Hello World3</a>
+      <p>Anak ako ni Div</p>
+    </div>
+    <p>hello</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, sed.</span>
+
+    <div id="div2">
+      <h1>Lorem, ipsum.</h1>
+      <div>
+        <p id="p1">
+          Anak Ako ni div Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum atque
+          libero vel odit magnam voluptatum!
+        </p>
+      </div>
+
+      <p>Anak ako ni div</p>
+    </div>
+
+    <div>
+      <div id="div3">Lorem ipsum dolor sit amet.</div>
+      <h1>Lorem, ipsum.</h1>
+      <div>
+        <p id="p1">
+          Anak Ako ni div Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum atque
+          libero vel odit magnam voluptatum!
+        </p>
+      </div>
+      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, expedita!</h1>
+      <p>Anak ako ni div</p>
+    </div>
+
+    <div>
+      <div id="div4">Lorem ipsum dolor sit amet.</div>
+      <h1>Lorem, ipsum.</h1>
+      <div>
+        <p id="p1">
+          Anak Ako ni div Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum atque
+          libero vel odit magnam voluptatum!
+        </p>
+      </div>
+      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, expedita!</h1>
+      <p>Anak ako ni div</p>
+    </div>
+
+    <div>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+    </div>
+
+    <div class="box"></div>
+
+    <p id="p">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, iure quos. Ipsam deleniti,
+      ducimus facere voluptatem dolore vel nihil beatae!
+    </p>
+  </body>
+</html>

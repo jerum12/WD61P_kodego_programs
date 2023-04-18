@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      li {
+        list-style: none;
+        display: inline;
+        padding: 20px;
+        margin: 20px;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .sticky {
+        position: sticky;
+        top: 0;
+      }
+      .relative {
+        position: relative;
+        top: 100px;
+        border: 1px solid blue;
+      }
+      .absolute {
+        position: absolute;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative">
+      <h1>Relative</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, molestiae.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae in nisi eveniet
+        vero, exercitationem illum reprehenderit ipsam et veniam commodi, suscipit alias veritatis
+        excepturi distinctio doloribus maxime sapiente tempore facilis! Impedit, ratione repudiandae
+        fuga doloribus quos labore autem, itaque voluptas debitis eum soluta sequi ducimus facilis!
+        Sed, neque atque.
+      </p>
+
+      <div class="sticky">
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="absolute">
+        <h1>Absolute</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, molestiae.</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, repudiandae in nisi eveniet
+          vero, exercitationem illum reprehenderit ipsam et veniam commodi, suscipit alias veritatis
+          excepturi distinctio doloribus maxime sapiente tempore facilis! Impedit, ratione
+          repudiandae fuga doloribus quos labore autem, itaque voluptas debitis eum soluta sequi
+          ducimus facilis! Sed, neque atque.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
