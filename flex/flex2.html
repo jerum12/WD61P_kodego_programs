@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parentClass{
+            display: flex;
+            /* align-content dapat ung flex-wrap = wrap */
+        }
+
+        .childClass{
+            width: 500px;
+            height: 100px;
+        }
+
+        .parentClass > div:nth-child(1){
+            background-color: aqua;
+        }
+
+        .parentClass > div:nth-child(2){
+            background-color: brown;
+        }
+
+        .parentClass > div:nth-child(3){
+            background-color: green;
+        }
+
+        .parentClass > div:nth-child(4){
+            background-color: red;
+            order:1;
+        }
+
+        .parentClass > div:nth-child(5){
+            background-color: black;
+        }
+
+        .parentClass > div:nth-child(6){
+            background-color: gray;
+        }
+        .parentClass > div:nth-child(7){
+            background-color: violet;
+        }
+        .parentClass > div:nth-child(8){
+            background-color: pink;
+            order:2;
+        }
+        .parentClass > div:nth-child(9){
+            background-color: blue;
+        }
+        .parentClass > div:nth-child(10){
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentClass">
+        <div class="childClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perferendis!</div>
+        <div class="childClass">Lorem ipsum dolor sit amet.</div>
+        <div class="childClass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id culpa quasi doloribus labore aspernatur doloremque sunt perspiciatis amet nihil at.</div>
+        <div class="childClass">4</div>
+        <div class="childClass">5</div>
+        <div class="childClass">6</div>
+        <div class="childClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates delectus ipsam nemo obcaecati, repellendus ut.</div>
+        <div class="childClass">8</div>
+        <div class="childClass">9</div>
+        <div class="childClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi obcaecati ut corrupti, suscipit enim repudiandae ea dolores. Tempora corporis eligendi nisi odit adipisci porro illo fugit ad! Sunt, fugiat quo?</div>
+    </div>
+</body>
+</html>

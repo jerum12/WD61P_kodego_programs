@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        
+    }
+
+    [class*="col-"]{
+        float: left;
+        padding: 15px;
+        border: 1px solid blue;
+    }
+
+    .col-1{
+        width: 8.33%;
+    }
+    .col-2{
+        width: 16.66%;
+    }
+    .col-4{
+        width: 33.33%;
+        
+    }
+    .col-6{
+        width: 50%;
+    }
+
+    .col-8{
+        width: 66.66%;
+        
+    }
+    .main{
+        width: 25%;
+        height: 50px;
+        border:1px solid red;
+        float: left;
+    }
+    .side{
+        width: 75%;
+        height: 50px;
+        border: 1px solid green;
+        float: left;
+    }
+    @media (min-width: 600px) and (max-width:768px ){
+        body{
+            background: lightcoral;
+        }
+        
+    }
+</style>
+<body>
+    <div class="main">
+        25%
+    </div>
+    <div class="side">
+        75%
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <label for="user">Username</label>
+        </div>
+        <div class="col-8"><input type="text" placeholder="Username" ></div>
+    </div>
+</body>
+</html>

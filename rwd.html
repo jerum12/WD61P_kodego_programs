@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            width:80%;
+            display: flex;
+            background-color: lightcyan;
+            height: 100vh;
+            margin:0px auto;
+            flex-direction: column;
+            background: url('https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?cs=srgb&dl=pexels-benjamin-suter-3617500.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            display: flex;
+            min-height: 50px;
+            background: maroon;
+            justify-content: center;
+        }
+
+        main{
+            display: flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        .left-area{
+            background:lightgreen;
+            display: flex;
+            justify-content: center;
+            flex-basis: 30%;
+            min-height: 60vh;
+            align-content: center;
+        }
+        .right-area{
+            display: flex;
+            flex-basis: 70%;
+            background: yellow;
+            align-content: center;
+        }
+
+        .right-area div{
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        footer{
+            display: flex;
+            margin-top:20px;
+            background: green;
+        }
+
+        @media (max-width: 600px){
+            body{
+                background: url('https://media.istockphoto.com/id/1140046341/photo/3d-render-background-retro-1980-yellow-and-purple-gradient-whit-grid-and-smoke.jpg?b=1&s=170667a&w=0&k=20&c=nnkSJqibKyJ9RWWVaa5NUTguoQ7DZPSCVrbjOeboDL4=');
+            }
+            main{
+                flex-direction: column;
+            }
+            .left-area{
+                margin-top: 20px;
+                min-height: 20vh;
+            }
+            .right-area{
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="logo">Logo</header>
+    <main>
+        <div class="left-area">
+            <div class="nav-area">Left Side Navigation</div>
+        </div>
+        <div class="right-area">
+            <div class="header-area">Banner</div>
+            <div class="body-area">Body Area </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-area">Footer</div>
+    </footer>
+</body>
+</html>
