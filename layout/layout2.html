@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Responsive Web Design 2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        width: 80%;
+        margin: 0px auto;
+        background: lightblue;
+      }
+
+      /* HEADER PART */
+      header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      header > .logo-nav-area {
+        display: flex;
+        justify-content: space-between;
+        min-height: 50px;
+      }
+      .logo-area {
+        background: rgb(245, 245, 106);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 34%;
+      }
+
+      .nav-area {
+        background: rgb(108, 106, 245);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 65%;
+      }
+
+      header > .banner-area {
+        display: flex;
+        min-height: 100px;
+        background: rgb(250, 186, 68);
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      /* MAIN PART */
+      main {
+        display: flex;
+        min-height: 70vh;
+        margin-top: 20px;
+        justify-content: space-between;
+      }
+
+      main > .box-area {
+        background: rgb(248, 149, 248);
+        flex-basis: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* FOOTER PART */
+      footer {
+        display: flex;
+        background: pink;
+        margin-top: 20px;
+        min-height: 50px;
+      }
+
+      footer > .footer-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+      }
+
+      @media (max-width: 600px) {
+        main {
+          flex-direction: column;
+        }
+        main > .box-area {
+          min-height: 200px;
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER PART -->
+    <header>
+      <div class="logo-nav-area">
+        <div class="logo-area">Logo Here</div>
+        <div class="nav-area">Navigation Here</div>
+      </div>
+      <div class="banner-area">Banner Here</div>
+    </header>
+
+    <!-- MAIN PART -->
+    <main>
+      <div class="box-area">Box Area 1</div>
+      <div class="box-area">Box Area 2</div>
+      <div class="box-area">Box Area 3</div>
+    </main>
+
+    <!-- FOOTER PART -->
+    <footer>
+      <div class="footer-area">Footer</div>
+    </footer>
+  </body>
+</html>
