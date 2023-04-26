@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Sample</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .banner-img {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQME6bCbDGzQLjHPn4Sx1iGHB8EPFYxYjzuQEMOMU06IBzz7Mov_VSczKuAmErXTtqyxpA&usqp=CAU')
+          no-repeat center center;
+        background-size: cover;
+        padding-top: 20%;
+        padding-bottom: 20%;
+        color: #fff;
+      }
+
+      #a1 {
+        left: 5%;
+        top: 30%;
+        -webkit-animation: flickerAnimation 5s infinite;
+        animation: flickerAnimation 5s infinite;
+      }
+      #a2 {
+        right: 20%;
+        top: 25%;
+        -webkit-animation: flickerAnimation 10s infinite;
+        animation: flickerAnimation 10s infinite;
+      }
+
+      #a3 {
+        right: 5%;
+        bottom: 20%;
+        -webkit-animation: flickerAnimation 8s infinite;
+        animation: flickerAnimation 8s infinite;
+      }
+
+      #a4 {
+        right: 10%;
+        top: 20%;
+        -webkit-animation: flickerAnimation 7s infinite;
+        animation: flickerAnimation 7s infinite;
+      }
+
+      #a5 {
+        left: 10%;
+        bottom: 10%;
+        -webkit-animation: flickerAnimation 4s infinite;
+        animation: flickerAnimation 4s infinite;
+      }
+
+      .position-absolute > img {
+        width: 50px;
+      }
+
+      @keyframes flickerAnimation {
+        0% {
+          transform: scale(1) rotate(0deg);
+        }
+        100% {
+          transform: scale(2) rotate(0.1deg);
+        }
+      }
+
+      @-webkit-keyframes flickerAnimation {
+        0% {
+          transform: scale(1, 1);
+        }
+        50% {
+          transform: scale(1.2, 1.2);
+        }
+        100% {
+          transform: scale(1, 1);
+        }
+      }
+
+      .about-col {
+        display: flex;
+        border-radius: 50%;
+        width: 150px;
+        margin: 0px auto;
+        height: 150px;
+        color: #fff;
+        background-color: #dc3545;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* @-webkit-keyframes moveScale {
+        0% {
+          -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+        }
+        50% {
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+        }
+        100% {
+          -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+        }
+      }
+
+      @keyframes moveScale {
+        0% {
+          -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+        }
+        50% {
+          -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+        }
+        100% {
+          -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+        }
+      }
+
+      @-webkit-keyframes moveLeftBounce {
+        0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+        50% {
+          -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+        }
+        100% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+      }
+
+      @keyframes moveLeftBounce {
+        0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+        50% {
+          -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+        }
+        100% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="home">
+      <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">My Portfolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto mb-2">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" href="#aboutus">About</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section>
+      <div class="container-fluid banner-img position-relative">
+        <div class="container text-center">
+          <small class="fs-6 text-primary">Welcome to my Portfolio!</small>
+          <h3 class="display-1">Jerum Galang</h3>
+          <a href="#layanan">
+            <button type="button" class="btn btn-outline-warning btn-lg">See more</button>
+          </a>
+        </div>
+
+        <div class="position-absolute animate-img" id="a1">
+          <img src="https://cdn-icons-png.flaticon.com/512/4703/4703650.png" alt="CP" />
+        </div>
+
+        <div class="position-absolute animate-img" id="a3">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/010/998/283/small/3d-programmer-pc-illustration-side-view-free-png.png"
+            alt="CP"
+          />
+        </div>
+
+        <div class="position-absolute animate-img2" id="a4">
+          <img
+            src="https://www.designhill.com/design-blog/wp-content/uploads/2014/06/responsive_web_design11.png"
+            alt="CP"
+          />
+        </div>
+
+        <div class="position-absolute animate-img2" id="a5">
+          <img src="https://freepngimg.com/save/19591-web-development-png-pic/524x279" alt="CP" />
+        </div>
+      </div>
+    </section>
+    <!-- ABOUTUS -->
+
+    <section id="aboutus">
+      <div class="container-fluid" style="padding-top: 100px">
+        <div class="container text-center">
+          <h6 class="display-6">About Us</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, doloribus.</p>
+          <div class="row pt-5">
+            <div class="col-md-4">
+              <span class="about-col"><i class="fas fa-code fa-5x"></i></span>
+              <h3 class="mt-3">Web Developement</h3>
+              <p class="text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam quidem neque
+                quae fugit rem.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <span class="about-col"><i class="fas fa-palette fa-5x"></i></span>
+              <h3 class="mt-3">Web Design</h3>
+              <p class="text-center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, excepturi nostrum,
+                ea ab natus molestias reiciendis aut, dolore laudantium dolores distinctio id eum
+                sequi consequuntur dolor minima mollitia quos exercitationem.
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <span class="about-col"><i class="fa-solid fa-mobile-screen-button fa-5x"></i></span>
+              <h3 class="mt-3">Mobile Developement</h3>
+              <p class="text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas reiciendis ducimus
+                repellat a, assumenda laborum amet animi temporibus enim nostrum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section>
+      <div class="container-fluid pt-5 pb-5 bg-light">
+        <div class="container text-center">
+          <h2 class="display-3" id="portofolio">Portofolio</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, dolorum quasi? Neque
+            consectetur odio placeat inventore perferendis quibusdam omnis deleniti.
+          </p>
+          <div class="row pt-4 gy-4">
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://media.istockphoto.com/id/1358013032/photo/web-development-concept.jpg?b=1&s=170667a&w=0&k=20&c=aAR7goX4e7jDiUfx1SNA7lD04WldUv6okpifv80xGcw="
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://www.elsevier.com/__data/assets/image/0004/823261/information-system-supporting-science.jpg"
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://media.istockphoto.com/id/1467509880/photo/hrm-or-human-resource-management-businessman-holding-magnifier-select-and-accept-to-manager.jpg?b=1&s=170667a&w=0&k=20&c=DRAY1HEdxurmtTQlhqrE01J7a8Oc7gmz0l9cutK59xY="
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jmqIekqPOTm4NhpF7X_j8WzfPGJQuhneWUE5Ysinfyu9P0H1FeYNe1_jt82_dlSCia4&usqp=CAU"
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://timebusinessnews.com/wp-content/uploads/web-2.jpg"
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://media.istockphoto.com/id/1408387701/photo/social-media-marketing-digitally-generated-image-engagement.jpg?b=1&s=170667a&w=0&k=20&c=udzg1fifSWZqXvkBJyEAPe2iFGiEi9NxasBCpBAdogo="
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis odit atque nam
+                    animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <div class="container-fluid pt-5 pb-5 contact">
+        <div class="container">
+          <h2 class="display-3 text-center" id="contact">Contact Us</h2>
+          <p class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, porro.
+          </p>
+          <div class="row pb-3">
+            <div class="col-md-6">
+              <input class="form-control form-control-lg mb-3" type="text" placeholder="Username" />
+              <input class="form-control form-control-lg mb-3" type="email" placeholder="Email" />
+              <input
+                class="form-control form-control-lg"
+                type="number"
+                placeholder="Phone Number"
+              />
+            </div>
+            <div class="col-md-6">
+              <textarea class="form-control form-control-lg" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="mx-auto text-center">
+            <button type="button" class="btn btn-warning btn-lg">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <footer>
+        <div class="container-fluid text-center pt-2 pb-2 bg-dark" data-bs-theme="dark">
+          <span style="color: white"> All Rights Reserved &copy; 2023</span>
+        </div>
+      </footer>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
