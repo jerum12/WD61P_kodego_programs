@@ -17,6 +17,36 @@ body {
 .table-active {
   color: rgb(255, 0, 0);
 }
+.test2 {
+  position: relative; /* Set the container to a relative position */
+  background-image: url('https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'); /* Set the background image of the container */
+  background-size: cover; /* Scale the background image to cover the container */
+  background-position: center; /* Center the background image within the container */
+  color: #fff; /* Set the text color to white */
+}
+
+.test2::before {
+  content: ''; /* Add content to the pseudo-element */
+  display: block; /* Make the pseudo-element a block-level element */
+  position: absolute; /* Position the pseudo-element absolutely within the container */
+  top: 0; /* Align the top of the pseudo-element with the top of the container */
+  left: 0; /* Align the left of the pseudo-element with the left of the container */
+  width: 100%; /* Set the width of the pseudo-element to match the container */
+  height: 100%; /* Set the height of the pseudo-element to match the container */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Set the background color of the pseudo-element to a semi-transparent black */
+  opacity: 0.7; /* Set the opacity of the pseudo-element */
+  z-index: -1; /* Set the z-index of the pseudo-element to be behind the content */
+}
+
+.test2 {
+  position: relative; /* Set the content to a relative position */
+  z-index: 1; /* Set the z-index of the content to be in front of the pseudo-element */
+}
 
 /* .row {
   border: 1px solid red;
