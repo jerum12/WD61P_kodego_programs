@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form method="post" action="submit.php" name="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="name">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <input type="submit" value="Submit" onclick="validateForm(event)" />
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function validateForm(event) {
+        let nameInput = document.getElementById('name');
+        let emailInput = document.getElementById('email');
+
+        if (nameInput.trim() === '') {
+          alert('Please enter a name');
+          event.preventDefault();
+          return false;
+        } else if ('/^0-9$/'.match(nameInput.trim())) {
+          alert('Please enter a valid name');
+          event.preventDefault();
+          return false;
+        }
+
+        if (emailInput.value === '') {
+          alert('Please enter an email');
+          event.preventDefault();
+          return false;
+        }
+
+        if (emailInput.value === 'hello@kodego.ph') {
+          alert('Please enter an email');
+          event.preventDefault();
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

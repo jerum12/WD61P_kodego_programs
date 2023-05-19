@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="inputElement" />
+      <button onclick="pushElement();">Push</button>
+      <button onclick="popElement();">Pop</button>
+
+      <ul id="stackElements"></ul>
+    </div>
+
+    <script type="text/javascript">
+      let arrayStackValue = [];
+
+      function pushElement() {
+        let inputElement = document.getElementById('inputElement');
+        let inputElementValue = inputElement.value;
+        arrayStackValue.push(inputElementValue);
+        console.log(inputElementValue);
+        inputElement.value = '';
+
+        displayElement();
+      }
+      function popElement() {
+        let popElement = arrayStackValue.pop();
+        console.log(popElement);
+
+        displayElement();
+      }
+
+      function displayElement() {
+        let stackElement = document.getElementById('stackElements');
+
+        stackElement.innerHTML = JSON.stringify(arrayStackValue);
+      }
+    </script>
+  </body>
+</html>

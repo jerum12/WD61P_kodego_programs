@@ -51,3 +51,11 @@ const sum = num.reduce(function (prev, curr) {
 });
 console.log(sum);
 console.log(num.toString());
+
+const artists = ['Kervi', 'Lea', 'JohnSkyle', 'Nicole', 'Vina', 'allen', 'Merriss'];
+
+artists.filter(returnAllGirls);
+
+function returnAllGirls(artist) {
+  return artist !== 'Kervi' && artist !== 'JohnSkyle' && artist !== 'Nicole';
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #boxDiv,
+      #regularElem {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body onload="onLoadFunction()">
+    <div id="boxDiv"></div>
+
+    <div id="regularElem" style="background-color: green" onclick="nagClickSaDiv();"></div>
+
+    <script>
+      // window.addEventListener('resize', displayRandom);
+
+      //   function displayRandom() {
+      //     console.log(Math.random());
+      //   }
+      //   document.getElementById('regularElem').addEventListener('click', nagClickSaDiv);
+
+      let boxElement = document.getElementById('boxDiv');
+      let position = 0;
+      let direction = 1;
+      let animate;
+
+      function animateThisBox() {
+        position += direction * 5;
+
+        if (position >= 200 || position <= 0) {
+          direction *= -1;
+        }
+        boxElement.style.left = position + 'px';
+
+        animate = requestAnimationFrame(animateThisBox);
+      }
+      animateThisBox();
+
+      setTimeout(() => {
+        cancelAnimationFrame(animate);
+      }, 5000);
+
+      function nagClickSaDiv() {
+        console.log('nagClickSaDiv');
+        function2();
+      }
+
+      function onLoadFunction() {
+        console.log('Lodaing Body================================');
+      }
+    </script>
+  </body>
+</html>

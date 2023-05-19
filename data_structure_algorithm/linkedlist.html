@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stack</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="inputElement" />
+      <button onclick="addToLinkedList();">Add</button>
+      <button onclick="removeFromLinkedList();">Remove</button>
+
+      <ul id="stackElements"></ul>
+    </div>
+
+    <script type="text/javascript">
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
+
+      class LinkedList {
+        constructor() {
+          this.head = null;
+        }
+
+        addToTail(value) {
+          const newNode = new Node(value);
+
+          if (this.head === null) {
+            this.head = newNode;
+          } else {
+            let current = this.head;
+            while (current.next !== null) {
+              current = current.next;
+            }
+            current.next = newNode;
+          }
+          displayElement();
+        }
+
+        removeFromHead() {
+          if (this.head === null) {
+            console.log('The list is empty!');
+            return;
+          }
+
+          const removeNode = this.head;
+          this.head = this.head.next;
+
+          displayElement();
+
+          console.log('Removed node:', removeNode);
+        }
+      }
+
+      const linkedList = new LinkedList();
+
+      function addToLinkedList() {
+        let inputElement = document.getElementById('inputElement');
+        let inputElementValue = inputElement.value;
+
+        linkedList.addToTail(inputElementValue);
+
+        inputElement.value = '';
+      }
+
+      function removeFromLinkedList() {
+        linkedList.removeFromHead();
+      }
+
+      function displayElement() {
+        let stackElement = document.getElementById('stackElements');
+        stackElement.innerHTML = '';
+
+        let current = linkedList.head;
+
+        while (current !== null) {
+          const liElement = document.createElement('li');
+          liElement.appendChild(document.createTextNode(current.value));
+          stackElement.appendChild(liElement);
+          current = current.next;
+        }
+      }
+    </script>
+  </body>
+</html>

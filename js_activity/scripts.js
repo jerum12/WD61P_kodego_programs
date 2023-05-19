@@ -36,3 +36,18 @@ var presidents = [
     details: '1961-1965',
   },
 ];
+
+let imageVariable = document.createElement('img');
+imageVariable.setAttribute('src', 'image.png');
+
+//document.getElementById('root');
+document.querySelector('#root').appendChild(imageVariable);
+
+for (let i = 0; i < presidents.length; i++) {
+  let divE = document.createElement('div');
+  divE.setAttribute('class', 'card');
+
+  let h1 = document.createElement('h1');
+  divE.appendChild(h1);
+  h1.textContent = presidents[i].name;
+}
