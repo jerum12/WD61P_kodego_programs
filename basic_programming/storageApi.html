@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="textInput" />
+    <button onclick="saveMessage()">Save Message</button>
+    <button onclick="loadMessage()">Load Message</button>
+    <div id="message"></div>
+
+    <script type="text/javascript">
+      function saveMessage() {
+        let text = document.getElementById('textInput');
+        let textValue = text.value;
+
+        localStorage.setItem('savedMessage', textValue);
+        alert('Message saved successfully');
+        text.innerHTML = '';
+      }
+
+      function loadMessage() {
+        let message = localStorage.getItem('savedMessage');
+
+        if (message)
+          document.getElementById('message').innerHTML = localStorage.getItem('savedMessage');
+        else document.getElementById('message').innerHTML = 'No message found.';
+      }
+    </script>
+  </body>
+</html>

@@ -15,5 +15,12 @@ let name2 = '';
 let address = null;
 let age = undefined;
 
-let result = name2 ?? 'default value';
-console.log(result);
+address.toUpperCase();
+//COALESCING ??
+let result = name2 ?? 'default value for name2';
+let result2 = address ?? 'default value for address';
+let result3 = age ?? 'default value for age';
+
+console.log('result-name2', result);
+console.log('result-address', result2.toUpperCase());
+console.log('result-age', result3);

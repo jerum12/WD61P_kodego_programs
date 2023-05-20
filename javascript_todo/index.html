@@ -65,7 +65,8 @@
       function addTasks() {
         console.log('addTask');
         let inputTask = document.getElementById('inputTask');
-        let inputTaskValue = inputTask.value.trim();
+
+        let inputTaskValue = inputTask.value?.trim() ?? '';
 
         if (inputTaskValue === '') {
           alert('Please enter a valid task');
