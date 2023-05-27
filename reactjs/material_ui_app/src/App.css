@@ -1,0 +1,44 @@
+.navbar-default {
+  background: black !important;
+}
+
+.home-section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 94vh !important;
+  background-image: url('https://img.freepik.com/free-vector/white-background-with-blue-tech-hexagon_1017-19366.jpg?w=2000') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center top !important;
+}
+
+.about-section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #fcfcfc !important;
+  margin: 30px;
+}
+
+.contact-section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #fcfcfc !important;
+  width: 100%;
+}
+
+.home-section-h2 {
+  color: #0c529b !important;
+}
+
+.divider {
+  background-color: rgb(60, 44, 207);
+  width: 200px !important;
+  height: 2px !important;
+}
